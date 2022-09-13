@@ -7,7 +7,7 @@ return [
             'api' => [
                 'title' => 'L5 Swagger UI',
                 'auth',
-                'title' => 'Integration Swagger in Laravel with Passport Auth',
+                'title' => 'Documentación con Swagger en Laravel',
             ],
 
             'routes' => [
@@ -175,10 +175,10 @@ return [
                 //Open API 3.0 support
                 'passport' => [ // Unique name of security
                     'type' => 'apiKey', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
-                    'description' => 'Laravel passport oauth2 security.',
+                    'description' => 'Introduzca el token de la forma (Bearer <token>)',
                     'in' => 'header',
                     "name" => "Authorization",
-                    'scheme' => 'https',
+                    'schemes' => 'https',
                     'flows' => [
                         "password" => [
                             "authorizationUrl" => config('app.url') . '/oauth/authorize',
