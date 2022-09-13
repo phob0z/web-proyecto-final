@@ -38,35 +38,35 @@ export const DashboardTemplate = () =>
                 <hr className="mt-5 text-orange-900" />
                 <ul className="mt-5 list-disc list-outside px-5">
                     <li className="text-orange-900">
-                        <Link to='/update-profile' className={`${urlActual === '/update-profile' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Update profile</Link>
+                        <Link to='/update-profile' className={`${urlActual === '/update-profile' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Actualizar perfil</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/directors' className={`${urlActual === '/directors' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Directors</Link>
+                        <Link to='/directors' className={`${urlActual === '/directors' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Listar directores</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a director</Link>
+                        <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Crear un director</Link>
                     </li>
                     {/* Reports */}
                     <li className="text-orange-900">
-                        <Link to='/reports' className={`${urlActual === '/reports' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Reports</Link>
+                        <Link to='/reports' className={`${urlActual === '/reports' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Listar reportes</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/reports/create' className={`${urlActual === '/reports/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Report</Link>
+                        <Link to='/reports/create' className={`${urlActual === '/reports/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Crear un reporte</Link>
                     </li>
                     {/* Jails */}
                     <li className="text-orange-900">
-                        <Link to='/jails' className={`${urlActual === '/jails' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Jails</Link>
+                        <Link to='/jails' className={`${urlActual === '/jails' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Listar carceles</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/jails/create' className={`${urlActual === '/jails/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Jail</Link>
+                        <Link to='/jails/create' className={`${urlActual === '/jails/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Crear una carcel</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/wards' className={`${urlActual === '/wards' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Wards</Link>
+                        <Link to='/wards' className={`${urlActual === '/wards' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Listar pabellones</Link>
                     </li>
                     <li className="text-orange-900">
-                        <Link to='/wards/create' className={`${urlActual === '/wards/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Ward</Link>
+                        <Link to='/wards/create' className={`${urlActual === '/wards/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Crear un pabellon</Link>
                     </li>
-                    <button type="button" onClick={onLogout} className="m-auto text-white text-2xl block mt-4 hover:text-red-300 text-center bg-red-900 p-1 rounded-lg">Logout</button>
+                    <button type="button" onClick={onLogout} className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Salir</button>
                 </ul>
             </div>
 
