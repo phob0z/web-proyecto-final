@@ -9,7 +9,7 @@
             "url": "https://web-final-backend.herokuapp.com/api/v1"
         }
     ],
-    "schemes": ["https", "http"],
+    "schemes": ["https"],
     "paths": {
         "/profile/avatar": {
             "post": {
