@@ -16,34 +16,34 @@ export const ResetPassword = () =>
         e.preventDefault();
         try {
             const response = await axios.post(
-                'https://web-final-backend.herokuapp.com/api/v1/forgot-password',
+                'http://web-final-backend.herokuapp.com/api/v1/forgot-password',
                 //'https://localhost:8000/api/v1/forgot-password',
                 { email },
                 { headers: { 'accept': 'application/json' } }
             )
             console.log(response.data.message);
-            alert("Your account has been found!");  
+            alert("Cuenta encontrada!");  
             navigate('/set-new-password');       
         } catch (error) {
             console.log(error.response.data.message, 'error');
-            alert("Your account has not been found");
+            alert("Su cuenta no fue encontrada!");
         }
     }
 
     return (
         <>
-            <h2 className='text-2xl md:text-3xl font-bold'>Recover Your Account</h2>
-            <p className='text-sm text-gray-500 pb-6'>Enter your email to find your account</p>
+            <h2 className='text-2xl md:text-3xl font-bold'>Recuperar la cuenta</h2>
+            <p className='text-sm text-gray-500 pb-6'>Introduzca el correo de su cuenta</p>
             <form className='space-y-7 text-left' onSubmit={onRecover}>
                 <div>
-                    <Label description="Email address" htmlFor='email' />
+                    <Label description="Correo electrónico" htmlFor='email' />
                     <input
                         className='rounded-2xl text-base px-4 py-2 border-0 border-b border-gray-300 focus:border-cyan-500 disabled:opacity-50 block mt-2 w-full'
                         id='email'
                         name='email'
                         type='email'
                         value={email}
-                        placeholder='Enter your email'
+                        placeholder='Introduzca su correo'
                         maxLength="35"
                         required
                         autoFocus
@@ -51,7 +51,7 @@ export const ResetPassword = () =>
                     />
                 </div>
                 <div className='pt-4 flex justify-center'>
-                    <Button name='Send' styles='w-3/5' />
+                    <Button name='Enviar' styles='w-3/5' />
                 </div>
             </form>
 
