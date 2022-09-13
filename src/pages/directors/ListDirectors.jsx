@@ -87,7 +87,7 @@ export const ListDirectors = () => {
                     onClick={() => navigate(`/directors/edit/${director.id}`)}>Editar</button>
                   
                   <button type='button' className={`${director.state ? 'bg-red-800' : 'bg-green-800 '} block w-full text-white p-2 uppercase font-bold text-xs rounded-xl`}
-                    onClick={() => { deleteDirector(director.id) }}>{director.state ? 'Inactive' : 'Active'}</button>
+                    onClick={() => { deleteDirector(director.id) }}>{director.state ? 'Inactivo' : 'Activo'}</button>
                 </td>
               </tr>
             ))
