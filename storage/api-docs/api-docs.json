@@ -2304,6 +2304,7 @@
                 "in": "header",
                 "name": "Authorization",
                 "scheme": "https",
+                "schemes": "https",
                 "flows": {
                     "password": {
                         "authorizationUrl": "https://web-final-backend.herokuapp.com/oauth/authorize",

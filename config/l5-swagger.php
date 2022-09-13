@@ -48,6 +48,7 @@ return [
         ],
     ],
     'defaults' => [
+        'schemes' => ['https'],
         'routes' => [
             /*
              * Route for accessing parsed swagger annotations.
@@ -178,6 +179,7 @@ return [
                     'description' => 'Laravel passport oauth2 security.',
                     'in' => 'header',
                     "name" => "Authorization",
+                    'schemes' => 'https',
                     'scheme' => 'https',
                     'flows' => [
                         "password" => [
