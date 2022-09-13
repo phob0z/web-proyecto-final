@@ -9,7 +9,6 @@
             "url": "https://web-final-backend.herokuapp.com/api/v1"
         }
     ],
-    "schemes": ["https"],
     "paths": {
         "/profile/avatar": {
             "post": {
@@ -2304,7 +2303,6 @@
                 "in": "header",
                 "name": "Authorization",
                 "scheme": "https",
-                "schemes": "https",
                 "flows": {
                     "password": {
                         "authorizationUrl": "https://web-final-backend.herokuapp.com/oauth/authorize",
