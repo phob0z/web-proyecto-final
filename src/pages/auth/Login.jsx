@@ -19,7 +19,7 @@ export const Login = () =>
         e.preventDefault();
         try {
             const response = await axios.post(
-                'http://web-final-backend.herokuapp.com/api/v1/login',
+                '/api/v1/login',
                 //'http://localhost:8000/api/v1/login',
                 { email, password },
                 { headers: { 'accept': 'application/json' } }
