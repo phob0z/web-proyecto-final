@@ -38,7 +38,7 @@ export const UpdateDirector = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this director</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de este director</p>
                     )
             }
         </div>

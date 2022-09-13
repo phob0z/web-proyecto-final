@@ -27,24 +27,24 @@ export const ShowWard = () => {
 
     return (
         <div>
-            <h1 className='font-black text-4xl text-sky-900'>Ward</h1>
+            <h1 className='font-black text-4xl text-sky-900'>Pabellón</h1>
             <hr className='mt-3' />
-            <p className='mt-3'>Ward details</p>
+            <p className='mt-3'>Detalles de pabellón</p>
             {
                 Object.keys(ward).length > 0 ?
                     (
                         <div className='m-5 flex justify-between'>
                             <div>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Name: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Nombre: </span>
                                     {ward.name}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Location: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Ubicación: </span>
                                     {ward.location}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Description: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Descripción: </span>
                                     {ward.description}
                                 </p>
                             </div>
@@ -52,7 +52,7 @@ export const ShowWard = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this ward</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de este pabellón</p>
                     )
             }
         </div>

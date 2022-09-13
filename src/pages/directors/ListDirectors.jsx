@@ -27,7 +27,7 @@ export const ListDirectors = () => {
     try {
       console.warn(id);
       // eslint-disable-next-line no-restricted-globals
-      const confirmation = confirm("Are you sure?")
+      const confirmation = confirm("¿Está seguro?")
       if (confirmation) {
         await axios.get(
           `https://web-final-backend.herokuapp.com/api/v1/director/${id}/destroy`,
@@ -49,18 +49,18 @@ export const ListDirectors = () => {
 
   return (
     <div>
-      <h1 className='font-black text-4xl text-sky-900'>Directors</h1>
+      <h1 className='font-black text-4xl text-sky-900'>Directores</h1>
       <hr className='mt-3' />
-      <p className='mt-3'>List of created directors</p>
+      <p className='mt-3'>Lista de los directores</p>
 
       <table className='w-full mt-5 table-auto shadow bg-white'>
         <thead className='bg-sky-900 text-white'>
           <tr>
             <th className='p-2'>#</th>
-            <th className='p-2'>Username</th>
-            <th className='p-2'>Full Name</th>
-            <th className='p-2'>Email</th>
-            <th className='p-2'>State</th>
+            <th className='p-2'>Nombre de usuario</th>
+            <th className='p-2'>Nombre completo</th>
+            <th className='p-2'>Correo</th>
+            <th className='p-2'>Estado</th>
             <td className='p-2'></td>
           </tr>
         </thead>
@@ -82,9 +82,9 @@ export const ListDirectors = () => {
                 }</td>
                 <td className='p-3'>
                   <button type='button' className='bg-sky-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl'
-                    onClick={() => navigate(`/directors/show/${director.id}`)}>Show</button>
+                    onClick={() => navigate(`/directors/show/${director.id}`)}>Mostrar</button>
                   <button type='button' className='bg-cyan-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'
-                    onClick={() => navigate(`/directors/edit/${director.id}`)}>Edit</button>
+                    onClick={() => navigate(`/directors/edit/${director.id}`)}>Editar</button>
                   
                   <button type='button' className={`${director.state ? 'bg-red-800' : 'bg-green-800 '} block w-full text-white p-2 uppercase font-bold text-xs rounded-xl`}
                     onClick={() => { deleteDirector(director.id) }}>{director.state ? 'Inactive' : 'Active'}</button>

@@ -27,20 +27,20 @@ export const ShowReport = () => {
 
     return (
         <div>
-            <h1 className='font-black text-4xl text-sky-900'>Report</h1>
+            <h1 className='font-black text-4xl text-sky-900'>Reporte</h1>
             <hr className='mt-3' />
-            <p className='mt-3'>Report details</p>
+            <p className='mt-3'>Detalles de reporte</p>
             {
                 Object.keys(report).length > 0 ?
                     (
                         <div className='m-5 flex justify-between'>
                             <div>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Title: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Título: </span>
                                     {report.title}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Description: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Descripción: </span>
                                     {report.description}
                                 </p>
                             </div>
@@ -48,7 +48,7 @@ export const ShowReport = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this report</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de este reporte</p>
                     )
             }
         </div>

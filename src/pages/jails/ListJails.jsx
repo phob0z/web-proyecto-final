@@ -26,7 +26,7 @@ export const ListJails = () => {
     try {
       console.warn(id);
       // eslint-disable-next-line no-restricted-globals
-      const confirmation = confirm("Are you sure?")
+      const confirmation = confirm("¿Está seguro?")
       if (confirmation) {
         await axios.get(
           `https://web-final-backend.herokuapp.com/api/v1/jail/${id}/destroy`,
@@ -47,16 +47,16 @@ export const ListJails = () => {
 
   return (
     <div>
-      <h1 className='font-black text-4xl text-sky-900'>Jails</h1>
+      <h1 className='font-black text-4xl text-sky-900'>Carceles</h1>
       <hr className='mt-3' />
-      <p className='mt-3'>List of created jails</p>
+      <p className='mt-3'>Lista de las carceles</p>
 
       <table className='w-full mt-5 table-auto shadow bg-white'>
         <thead className='bg-sky-900 text-white'>
           <tr>
             <th className='p-2'>#</th>
-            <th className='p-2'>Name</th>
-            <th className='p-2'>Description</th>
+            <th className='p-2'>Nombre</th>
+            <th className='p-2'>Descripción</th>
             <td className='p-2'></td>
           </tr>
         </thead>
@@ -69,11 +69,11 @@ export const ListJails = () => {
                 <td className='p-3'>{jail.description}</td>
                 <td className='p-3'>
                   <button type='button' className='bg-sky-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl'
-                    onClick={() => navigate(`/jails/show/${jail.id}`)}>Show</button>
+                    onClick={() => navigate(`/jails/show/${jail.id}`)}>Mostrar</button>
                   <button type='button' className='bg-cyan-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'
-                    onClick={() => navigate(`/jails/edit/${jail.id}`)}>Edit</button>
+                    onClick={() => navigate(`/jails/edit/${jail.id}`)}>Editar</button>
                   <button type='button' className='bg-orange-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'
-                    onClick={() => deleteJail(jail.id)}>Delete</button>
+                    onClick={() => deleteJail(jail.id)}>Eliminar</button>
                 </td>
               </tr>
             ))

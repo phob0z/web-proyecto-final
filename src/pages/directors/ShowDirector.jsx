@@ -29,38 +29,38 @@ export const ShowDirector = () => {
         <div>
             <h1 className='font-black text-4xl text-sky-900'>Director</h1>
             <hr className='mt-3' />
-            <p className='mt-3'>Director details</p>
+            <p className='mt-3'>Detalles del director</p>
             {
                 Object.keys(director).length > 0 ?
                     (
                         <div className='m-5 flex justify-between'>
                             <div>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* First Name: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Nombre: </span>
                                     {director.first_name}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Last Name: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Apellido: </span>
                                     {director.last_name}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Email: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Correo: </span>
                                     {director.email}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Phone Number: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Teléfono: </span>
                                     {director.home_phone}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* State: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Estado: </span>
                                     {director.state ? 'Active' : 'Inactive'}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Birthdate: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Fecha de nacimiento: </span>
                                     {director.birthdate ? director.birthdate : 'N/A'}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Home phone number: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Teléfono de casa: </span>
                                     {director.personal_phone ? director.personal_phone : 'N/A'}
                                 </p>
                             </div>
@@ -71,7 +71,7 @@ export const ShowDirector = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this director</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de este director</p>
                     )
             }
         </div>

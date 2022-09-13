@@ -29,7 +29,7 @@ export const UpdateJail = () => {
 
     return (
         <div>
-            <h1 className='font-black text-4xl text-sky-900'>Jail</h1>
+            <h1 className='font-black text-4xl text-sky-900'>Carcel</h1>
             <hr className='mt-3' />
             {
                 Object.keys(jail).length > 0 ?
@@ -38,7 +38,7 @@ export const UpdateJail = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this jail</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de esta carcel</p>
                     )
             }
         </div>

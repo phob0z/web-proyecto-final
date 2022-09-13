@@ -27,32 +27,32 @@ export const ShowJail = () => {
 
     return (
         <div>
-            <h1 className='font-black text-4xl text-sky-900'>Jail</h1>
+            <h1 className='font-black text-4xl text-sky-900'>Carcel</h1>
             <hr className='mt-3' />
-            <p className='mt-3'>Jail details</p>
+            <p className='mt-3'>Detalles de la carcel</p>
             {
                 Object.keys(jail).length > 0 ?
                     (
                         <div className='m-5 flex justify-between'>
                             <div>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Name: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Nombre: </span>
                                     {jail.name}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Code: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Código: </span>
                                     {jail.code}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Type: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Tipo: </span>
                                     {jail.type}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Capacity: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Capacidad: </span>
                                     {jail.capacity}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
-                                    <span className="text-gray-600 uppercase font-bold">* Description: </span>
+                                    <span className="text-gray-600 uppercase font-bold">* Descripción: </span>
                                     {jail.description}
                                 </p>
                             </div>
@@ -60,7 +60,7 @@ export const ShowJail = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this jail</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de esta carcel</p>
                     )
             }
         </div>

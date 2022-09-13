@@ -29,7 +29,7 @@ export const UpdateReport = () => {
 
     return (
         <div>
-            <h1 className='font-black text-4xl text-sky-900'>Report</h1>
+            <h1 className='font-black text-4xl text-sky-900'>Reporte</h1>
             <hr className='mt-3' />
             {
                 Object.keys(report).length > 0 ?
@@ -38,7 +38,7 @@ export const UpdateReport = () => {
                     )
                     :
                     (
-                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No data for this report</p>
+                        <p className="bg-yellow-600 border-t border-b border-yellow-900 text-white px-4 py-3 m-5 text-center rounded-lg">No hay información de este reporte</p>
                     )
             }
         </div>
