@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000/api/v1"
+            "url": "http://web-final-backend.herokuapp.com:8000/api/v1"
         }
     ],
     "paths": {
