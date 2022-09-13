@@ -13,8 +13,8 @@ export const UpdateJail = () => {
         const getJail = async () => {
             try {
                 const response = await axios.get(
-                    `http://web-final-backend.herokuapp.com/api/v1/jail/${id}`,
-                    //`http://127.0.0.1:8000/api/v1/jail/${id}`,
+                    `https://web-final-backend.herokuapp.com/api/v1/jail/${id}`,
+                    //`https://127.0.0.1:8000/api/v1/jail/${id}`,
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 const jail = { ...response.data.data.jail, id }

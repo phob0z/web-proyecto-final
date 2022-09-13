@@ -13,8 +13,8 @@ export const UpdateReport = () => {
         const getReport = async () => {
             try {
                 const response = await axios.get(
-                    `http://web-final-backend.herokuapp.com/api/v1/report/${id}`,
-                    //`http://127.0.0.1:8000/api/v1/report/${id}`,
+                    `https://web-final-backend.herokuapp.com/api/v1/report/${id}`,
+                    //`https://127.0.0.1:8000/api/v1/report/${id}`,
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 const report = { ...response.data.data.report, id }

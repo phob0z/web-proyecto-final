@@ -13,8 +13,8 @@ export const UpdateWard = () => {
         const getWard = async () => {
             try {
                 const response = await axios.get(
-                    //`http://127.0.0.1:8000/api/v1/ward/${id}`,
-                    `http://web-final-backend.herokuapp.com/api/v1/ward/${id}`,
+                    //`https://127.0.0.1:8000/api/v1/ward/${id}`,
+                    `https://web-final-backend.herokuapp.com/api/v1/ward/${id}`,
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 const ward = { ...response.data.data.ward, id }

@@ -16,8 +16,8 @@ export const ResetPassword = () =>
         e.preventDefault();
         try {
             const response = await axios.post(
-                'http://web-final-backend.herokuapp.com/api/v1/forgot-password',
-                //'http://localhost:8000/api/v1/forgot-password',
+                'https://web-final-backend.herokuapp.com/api/v1/forgot-password',
+                //'https://localhost:8000/api/v1/forgot-password',
                 { email },
                 { headers: { 'accept': 'application/json' } }
             )

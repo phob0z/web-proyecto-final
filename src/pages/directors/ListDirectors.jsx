@@ -12,8 +12,8 @@ export const ListDirectors = () => {
   const getDirectors = async () => {
     try {
       const response = await axios.get(
-        'http://web-final-backend.herokuapp.com/api/v1/director',
-        //'http://127.0.0.1:8000/api/v1/director',
+        'https://web-final-backend.herokuapp.com/api/v1/director',
+        //'https://127.0.0.1:8000/api/v1/director',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
       console.log(response.data.data.users)
@@ -30,8 +30,8 @@ export const ListDirectors = () => {
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://web-final-backend.herokuapp.com/api/v1/director/${id}/destroy`,
-          //`http://127.0.0.1:8000/api/v1/director/${id}/destroy`,
+          `https://web-final-backend.herokuapp.com/api/v1/director/${id}/destroy`,
+          //`https://127.0.0.1:8000/api/v1/director/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
         await getDirectors();
@@ -72,11 +72,11 @@ export const ListDirectors = () => {
                 <td className='p-3'>{director.username}</td>
                 <td className='p-3'>{director.full_name}</td>
                 <td className='p-3'>{director.email}</td>
-                <td className='p-3'>{director.state ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-green-900 font-bold">
+                <td className='p-3'>{director.state ? <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-green-900 font-bold">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
                 </svg>
                   :
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-red-900 font-bold">
+                  <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-red-900 font-bold">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
                   </svg>
                 }</td>

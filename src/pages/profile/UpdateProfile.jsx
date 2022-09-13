@@ -13,8 +13,8 @@ export const UpdateProfile = () => {
         const getUser = async () => {
             try {
                 const response = await axios.get(
-                    `http://web-final-backend.herokuapp.com/api/v1/profile`,
-                   // `http://127.0.0.1:8000/api/v1/profile`,
+                    `https://web-final-backend.herokuapp.com/api/v1/profile`,
+                   // `https://127.0.0.1:8000/api/v1/profile`,
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 const user = { ...response.data.data.user, id }
