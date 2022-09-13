@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "https://web-final-backend.herokuapp.com/api/v1"
+            "url": "/api/v1"
         }
     ],
     "paths": {
@@ -2302,12 +2302,11 @@
                 "description": "Laravel passport oauth2 security.",
                 "in": "header",
                 "name": "Authorization",
-                "scheme": "https",
                 "flows": {
                     "password": {
-                        "authorizationUrl": "https://web-final-backend.herokuapp.com/oauth/authorize",
-                        "tokenUrl": "https://web-final-backend.herokuapp.com/oauth/token",
-                        "refreshUrl": "https://web-final-backend.herokuapp.com/token/refresh",
+                        "authorizationUrl": "/oauth/authorize",
+                        "tokenUrl": "/oauth/token",
+                        "refreshUrl": "/token/refresh",
                         "scopes": []
                     }
                 }
