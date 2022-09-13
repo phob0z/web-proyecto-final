@@ -131,7 +131,7 @@ class PasswordController extends Controller
         $token = $request->route('token');
         $email = $request->email;
         $url = "$frontend_url/?token=$token&email=$email";
-        return $this->sendResponse(message: 'Successful redirection', result: ['url' => $url]);
+        return $this->sendResponse(message: 'Successful redirection', result: ['url' => $url, 'token' => $token, 'email' => $email]);
     }
 
     // Función para la actualización del password
