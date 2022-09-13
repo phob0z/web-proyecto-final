@@ -41,12 +41,14 @@ export const DirectorForm = ({ director }) => {
             console.log(director)
             if (director?.id) {
                 await axios.post(
-                    `http://127.0.0.1:8000/api/v1/director/${director.id}/update`,
+                    `http://web-final-backend.herokuapp.com/api/v1/director/${director.id}/update`,
+                    //`http://127.0.0.1:8000/api/v1/director/${director.id}/update`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             } else {
                 await axios.post(
-                    `http://127.0.0.1:8000/api/v1/director/create`,
+                    `http://web-final-backend.herokuapp.com/api/v1/director/create`,
+                    //`http://127.0.0.1:8000/api/v1/director/create`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             }

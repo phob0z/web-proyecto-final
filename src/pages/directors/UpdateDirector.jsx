@@ -13,7 +13,8 @@ export const UpdateDirector = () => {
         const getDirector = async () => {
             try {
                 const response = await axios.get(
-                    `http://127.0.0.1:8000/api/v1/director/${id}`,
+                    `http://web-final-backend.herokuapp.com/api/v1/director/${id}`,
+                    //`http://127.0.0.1:8000/api/v1/director/${id}`,
                     { headers: { 'accept': 'application/json', 'authorization': token } }
                 )
                 const user = { ...response.data.data.user, id }

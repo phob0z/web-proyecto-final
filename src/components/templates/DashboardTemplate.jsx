@@ -16,7 +16,8 @@ export const DashboardTemplate = () =>
     {
         try {
             await axios.post(
-                'http://127.0.0.1:8000/api/v1/logout',
+                'http://web-final-backend.herokuapp.com/api/v1/logout',
+                //'http://127.0.0.1:8000/api/v1/logout',
                 {}, { headers: { 'accept': 'application/json', 'authorization': token } }
             );
             navigate('/login', { replace: true });

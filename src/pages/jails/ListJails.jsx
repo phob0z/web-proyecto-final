@@ -11,7 +11,8 @@ export const ListJails = () => {
   const getJails = async () => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/v1/jail',
+        'hhttp://web-final-backend.herokuapp.com/api/v1/jail',
+        //'http://127.0.0.1:8000/api/v1/jail',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
       console.log(response.data.data.jails)
@@ -28,7 +29,8 @@ export const ListJails = () => {
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://127.0.0.1:8000/api/v1/jail/${id}/destroy`,
+          `http://web-final-backend.herokuapp.com/api/v1/jail/${id}/destroy`,
+          //`http://127.0.0.1:8000/api/v1/jail/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
         await getJails();

@@ -11,7 +11,8 @@ export const ListReports = () => {
   const getReports = async () => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/v1/report',
+        'http://web-final-backend.herokuapp.com/api/v1/report',
+        //'http://127.0.0.1:8000/api/v1/report',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
       console.log(response.data.data.reports)
@@ -28,7 +29,8 @@ export const ListReports = () => {
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://127.0.0.1:8000/api/v1/report/${id}/destroy`,
+          `http://web-final-backend.herokuapp.com/api/v1/report/${id}/destroy`,
+          //`http://127.0.0.1:8000/api/v1/report/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
         await getReports();

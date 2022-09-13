@@ -11,7 +11,8 @@ export const ListWards = () => {
   const getWards = async () => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/v1/ward',
+        'http://web-final-backend.herokuapp.com/api/v1/ward',
+        //'http://127.0.0.1:8000/api/v1/ward',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
       console.log(response.data.data.wards)
@@ -28,7 +29,8 @@ export const ListWards = () => {
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://127.0.0.1:8000/api/v1/ward/${id}/destroy`,
+          `http://web-final-backend.herokuapp.com/api/v1/ward/${id}/destroy`,
+          //`http://127.0.0.1:8000/api/v1/ward/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
         await getWards();

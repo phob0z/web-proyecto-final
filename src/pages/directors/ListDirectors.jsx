@@ -12,7 +12,8 @@ export const ListDirectors = () => {
   const getDirectors = async () => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/v1/director',
+        'http://web-final-backend.herokuapp.com/api/v1/director',
+        //'http://127.0.0.1:8000/api/v1/director',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
       console.log(response.data.data.users)
@@ -29,7 +30,8 @@ export const ListDirectors = () => {
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://127.0.0.1:8000/api/v1/director/${id}/destroy`,
+          `http://web-final-backend.herokuapp.com/api/v1/director/${id}/destroy`,
+          //`http://127.0.0.1:8000/api/v1/director/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
         await getDirectors();

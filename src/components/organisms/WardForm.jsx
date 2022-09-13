@@ -37,12 +37,14 @@ export const WardForm = ({ ward }) => {
             console.log(ward)
             if (ward?.id) {
                 await axios.post(
-                    `http://127.0.0.1:8000/api/v1/ward/${ward.id}/update`,
+                    `http://web-final-backend.herokuapp.com/api/v1/ward/${ward.id}/update`,
+                    //`http://127.0.0.1:8000/api/v1/ward/${ward.id}/update`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             } else {
                 await axios.post(
-                    `http://127.0.0.1:8000/api/v1/ward/create`,
+                    `http://web-final-backend.herokuapp.com/api/v1/ward/create`,
+                    //`http://127.0.0.1:8000/api/v1/ward/create`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             }
