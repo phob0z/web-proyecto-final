@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../contexts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const App = () => {
   const { user } = useContext(AuthContext);

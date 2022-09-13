@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 
-import { Login, App } from '../pages';
+import { Login, App, Forgotpassword, Resetpassword } from '../pages';
 import { AuthTemplate } from '../components';
 import { AuthProvider } from "../contexts";
 import { PrivateRoute } from "./PrivateRoute";
@@ -21,12 +21,33 @@ export const AppRouter = () => {
                         <Routes>
                             <Route element={<AuthTemplate />}>
                                 <Route path='/*' element={<Login />} />
+                                <Route path='forgot-password/*' element={<Forgotpassword />} />
+                                <Route path='reset-password/*' element={<Resetpassword />} />
                             </Route>
                         </Routes>
                     </PublicRoute>
                 } />
 
-                
+                <Route path='/*' element={
+                    <PublicRoute>
+                        <Routes>
+                            <Route element={<AuthTemplate />}>
+                                <Route path='forgot-password/*' element={<Forgotpassword />} />
+                                <Route path='reset-password/*' element={<Resetpassword />} />
+                            </Route>
+                        </Routes>
+                    </PublicRoute>
+                } />
+
+                <Route path='nosotros/*' element={
+                    <PublicRoute>
+                        <Routes>
+                            <Route element={<AuthTemplate />}>
+                                Ruta publica
+                            </Route>
+                        </Routes>
+                    </PublicRoute>
+                } />
 
                 <Route path='/*' element={
                     <PrivateRoute>
