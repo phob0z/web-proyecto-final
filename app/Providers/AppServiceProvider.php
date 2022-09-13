@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
 use Spatie\Dropbox\Client as DropboxClient;
@@ -28,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (env('APP_ENV') != 'local') {
+            URL::forceScheme('https');
+        }
         Storage::extend('dropbox', function ($app, $config) {
             $adapter = new DropboxAdapter(new DropboxClient(
                 $config['authorization_token']
