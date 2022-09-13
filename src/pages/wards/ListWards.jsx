@@ -47,7 +47,7 @@ export const ListWards = () => {
 
   return (
     <div>
-      <h1 className='font-black text-4xl text-sky-900'>pabellones</h1>
+      <h1 className='font-black text-4xl text-sky-900'>Pabellones</h1>
       <hr className='mt-3' />
       <p className='mt-3'>Lista de los pabellones</p>
 

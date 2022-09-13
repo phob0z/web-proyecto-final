@@ -35,7 +35,7 @@ export const SetNewPassword = () =>
     return (
         <>
         <div data-toggle="modal" data-target="#exampleModalCenter">
-            <h2 className='text-2xl md:text-3xl font-bold'>Cmabiar contraseña</h2>
+            <h2 className='text-2xl md:text-3xl font-bold'>Cambiar contraseña</h2>
             <p className='text-sm text-gray-500 pb-6'>Introduzca las credenciales para resetear su contraseña</p>
             <form className='space-y-7 text-left' onSubmit={onResetpassword}>
                 <div>
