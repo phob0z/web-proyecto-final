@@ -29,7 +29,7 @@ export const DashboardTemplate = () =>
 
     return (
         <div className='md:flex md:min-h-screen'>
-            console.console.log({user});
+            {console.log(user)};
             <div className='md:w-1/4 bg-sky-900 px-5 py-10'>
                 <h2 className='text-3xl font-black text-center text-white border-b-2 border-red-700 rounded'>Sistema de prisión</h2>
                 <img src={user.avatar} alt="img-client" className="m-auto mt-4" width={120} />
