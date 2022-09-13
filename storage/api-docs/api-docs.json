@@ -6,7 +6,7 @@
     },
     "servers": [
         {
-            "url": "/api/v1"
+            "url": "https://web-final-backend.herokuapp.com/api/v1"
         }
     ],
     "paths": {
@@ -2305,9 +2305,9 @@
                 "scheme": "https",
                 "flows": {
                     "password": {
-                        "authorizationUrl": "/oauth/authorize",
-                        "tokenUrl": "/oauth/token",
-                        "refreshUrl": "/token/refresh",
+                        "authorizationUrl": "https://web-final-backend.herokuapp.com/oauth/authorize",
+                        "tokenUrl": "https://web-final-backend.herokuapp.com/oauth/token",
+                        "refreshUrl": "https://web-final-backend.herokuapp.com/token/refresh",
                         "scopes": []
                     }
                 }

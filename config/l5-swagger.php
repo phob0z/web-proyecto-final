@@ -2,7 +2,6 @@
 
 return [
     'default' => 'default',
-    'schemes' => ['https', 'http'],
     'documentations' => [
         'default' => [
             'api' => [
