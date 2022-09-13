@@ -1,4 +1,9 @@
 {
+    "host": "web-final-backend.herokuapp.com",
+    "basePath": "/api/v1",
+    "schemes": [
+        "https"
+    ],
     "openapi": "3.0.0",
     "info": {
         "title": "API Usuarios",
@@ -6,7 +11,7 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000/api/v1"
+            "url": "/api/v1"
         }
     ],
     "paths": {
@@ -2302,12 +2307,11 @@
                 "description": "Laravel passport oauth2 security.",
                 "in": "header",
                 "name": "Authorization",
-                "scheme": "https",
                 "flows": {
                     "password": {
-                        "authorizationUrl": "http://localhost/oauth/authorize",
-                        "tokenUrl": "http://localhost/oauth/token",
-                        "refreshUrl": "http://localhost/token/refresh",
+                        "authorizationUrl": "/oauth/authorize",
+                        "tokenUrl": "/oauth/token",
+                        "refreshUrl": "/token/refresh",
                         "scopes": []
                     }
                 }

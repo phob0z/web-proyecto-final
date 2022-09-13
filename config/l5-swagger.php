@@ -7,7 +7,7 @@ return [
             'api' => [
                 'title' => 'L5 Swagger UI',
                 'auth',
-                'title' => 'Integration Swagger in Laravel with Passport Auth',
+                'title' => 'Documentación con Swagger en Laravel',
             ],
 
             'routes' => [
@@ -20,7 +20,7 @@ return [
                 /*
                  * Edit to include full URL in ui for assets
                 */
-                'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', true),
+                'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', false), #original = true
 
                 /*
                  * File name of the generated json documentation file
@@ -48,6 +48,7 @@ return [
         ],
     ],
     'defaults' => [
+        // 'schemes' => ['https'],
         'routes' => [
             /*
              * Route for accessing parsed swagger annotations.
@@ -175,10 +176,10 @@ return [
                 //Open API 3.0 support
                 'passport' => [ // Unique name of security
                     'type' => 'apiKey', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
-                    'description' => 'Laravel passport oauth2 security.',
+                    'description' => 'Introduzca el token de la forma (Bearer <token>)',
                     'in' => 'header',
                     "name" => "Authorization",
-                    'scheme' => 'https',
+                    'schemes' => 'https',
                     'flows' => [
                         "password" => [
                             "authorizationUrl" => config('app.url') . '/oauth/authorize',
@@ -218,7 +219,7 @@ return [
          * Set this to `true` in development mode so that docs would be regenerated on each request
          * Set this to `false` to disable swagger generation on production
         */
-        'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', false),
+        'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', false), #original true
 
         /*
          * Set this to `true` to generate a copy of documentation in yaml format
@@ -292,7 +293,7 @@ return [
          * Constants which can be used in annotations
          */
         'constants' => [
-            'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
+            'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'https://my-default-host.com'),
         ],
     ],
 ];
