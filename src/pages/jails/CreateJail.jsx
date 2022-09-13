@@ -1,5 +1,5 @@
 import React from 'react';
-import { JailForm } from '../../components/organisms';
+import { JailForm } from '../../components/organisms/JailForm';
 
 export const CreateJail = () => {
     return (

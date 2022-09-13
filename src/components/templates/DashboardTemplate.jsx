@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { AuthContext } from '../../contexts';
-
-
+import { AuthContext } from '../contexts/auth/AuthContext';
 
 export const DashboardTemplate = () => 
 {
@@ -31,7 +29,6 @@ export const DashboardTemplate = () =>
     return (
         <div className='md:flex md:min-h-screen'>
 
-
             <div className='md:w-1/4 bg-sky-900 px-5 py-10'>
                 <h2 className='text-4xl font-black text-center text-white underline'>Prison System</h2>
                 <img src={user.avatar} alt="img-client" className="m-auto mt-4" width={120} />
@@ -40,12 +37,14 @@ export const DashboardTemplate = () =>
                 <hr className="mt-5 text-orange-900" />
                 <ul className="mt-5 list-disc list-outside px-5">
                     <li className="text-orange-900">
+                        <Link to='/update-profile' className={`${urlActual === '/update-profile' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Update profile</Link>
+                    </li>
+                    <li className="text-orange-900">
                         <Link to='/directors' className={`${urlActual === '/directors' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Directors</Link>
                     </li>
                     <li className="text-orange-900">
                         <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a director</Link>
                     </li>
-
                     {/* Reports */}
                     <li className="text-orange-900">
                         <Link to='/reports' className={`${urlActual === '/reports' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Reports</Link>
@@ -71,13 +70,13 @@ export const DashboardTemplate = () =>
             </div>
 
 
-
             <div className='md:w-3/4 p-10 md:h-screen overflow-y-scroll'>
                 <Outlet />
             </div>
-
 
             
         </div>
     );
 }
+
+

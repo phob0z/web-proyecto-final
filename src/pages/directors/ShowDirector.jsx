@@ -48,7 +48,7 @@ export const ShowDirector = () => {
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
                                     <span className="text-gray-600 uppercase font-bold">* Phone Number: </span>
-                                    {director.phone_number}
+                                    {director.home_phone}
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
                                     <span className="text-gray-600 uppercase font-bold">* State: </span>
@@ -60,7 +60,7 @@ export const ShowDirector = () => {
                                 </p>
                                 <p className="text-2xl text-gray-00 mt-4">
                                     <span className="text-gray-600 uppercase font-bold">* Home phone number: </span>
-                                    {director.home_phone_number ? director.home_phone_number : 'N/A'}
+                                    {director.personal_phone ? director.personal_phone : 'N/A'}
                                 </p>
                             </div>
                             <div>

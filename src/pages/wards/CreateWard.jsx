@@ -1,5 +1,5 @@
 import React from 'react';
-import { WardForm } from '../../components/organisms';
+import { WardForm } from '../../components/organisms/WardForm';
 
 export const CreateWard = () => {
     return (

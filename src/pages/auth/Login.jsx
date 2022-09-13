@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { Label, Button } from '../../components'
-import { AuthContext } from '../../contexts';
+import { AuthContext } from '../../components/contexts/auth/AuthContext';
 
 export const Login = () => 
 {
     const { login } = useContext(AuthContext);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const urlActual = location.pathname;
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -30,11 +32,6 @@ export const Login = () =>
             setEmail('');
             setPassword('');
         }
-    }
-
-    const onForgotPass = (e) => {
-        e.preventDefault();
-        navigate("/forgot-password");
     }
 
     return (
@@ -74,11 +71,11 @@ export const Login = () =>
                     <Button name='Sing in' styles='w-3/5' />
                 </div>
             </form>
-            <form className='space-y-7 text-left' onSubmit={onForgotPass}>
-                <div className='pt-1 flex justify-center'>
-                    <Button name='Forgot your password?' styles='w-3/5'/>
-                </div>
-            </form>
+            <p className='text-sm text-gray-500 pb-6'>
+                Forgot password?
+                <Link to='/reset-password' className={`${urlActual === '/reset-password' ? 'text-blue-300 underline' : 'text-black'} mt-2 hover:text-blue-200`} > Click Here!</Link>
+            </p>
+            
         </>
     );
 }

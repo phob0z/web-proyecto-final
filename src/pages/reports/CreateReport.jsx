@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReportForm } from '../../components/organisms';
+import { ReportForm } from '../../components/organisms/ReportForm';
 
 export const CreateReport = () => {
     return (
