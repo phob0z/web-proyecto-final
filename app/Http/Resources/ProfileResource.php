@@ -30,3 +30,4 @@ class ProfileResource extends JsonResource
 
     }
 }
+
