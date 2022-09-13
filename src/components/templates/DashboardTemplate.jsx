@@ -37,30 +37,30 @@ export const DashboardTemplate = () => {
                     <li className={`${urlActual === '/update-profile' ? 'text-blue-300' : ''}`}>
                         <Link to='/update-profile' className={`${urlActual === '/update-profile' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Actualizar perfil</Link>
                     </li>
-                    <li className={`${urlActual === '/directors' ? 'text-blue-300' : ''} ${user.role === 'director' || 'guard'? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/directors' ? 'text-blue-300' : ''} ${user.role === 'director' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/directors' className={`${urlActual === '/directors' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Listar directores</Link>
                     </li>
-                    <li className={`${urlActual === '/directors/create' ? 'text-blue-300' : ''} ${user.role === ''? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/directors/create' ? 'text-blue-300' : ''} ${user.role === 'director' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Crear un director</Link>
                     </li>
                     {/* Reports */}
-                    <li className={`${urlActual === '/reports' ? 'text-blue-300' : ''} ${user.role === 'admin' || 'director'? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/reports' ? 'text-blue-300' : ''} ${user.role === 'director' || user.role === 'admin'? 'hidden': ''}`}>
                         <Link to='/reports' className={`${urlActual === '/reports' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Listar reportes</Link>
                     </li>
-                    <li className={`${urlActual === '/reports/create' ? 'text-blue-300' : ''} ${user.role === ''? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/reports/create' ? 'text-blue-300' : ''} ${user.role === 'director' || user.role === 'admin'? 'hidden': ''}`}>
                         <Link to='/reports/create' className={`${urlActual === '/reports/create' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Crear un reporte</Link>
                     </li>
                     {/* Jails */}
-                    <li className={`${urlActual === '/jails' ? 'text-blue-300' : ''} ${user.role === 'admin' || 'guard'? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/jails' ? 'text-blue-300' : ''} ${user.role === 'admin' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/jails' className={`${urlActual === '/jails' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Listar carceles</Link>
                     </li>
-                    <li className={`${urlActual === '/jails/create' ? 'text-blue-300' : ''} ${user.role === ''? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/jails/create' ? 'text-blue-300' : ''} ${user.role === 'admin' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/jails/create' className={`${urlActual === '/jails/create' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Crear una carcel</Link>
                     </li>
-                    <li className={`${urlActual === '/wards' ? 'text-blue-300' : ''} ${user.role === 'admin' || 'guard'? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/wards' ? 'text-blue-300' : ''} ${user.role === 'admin' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/wards' className={`${urlActual === '/wards' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Listar pabellones</Link>
                     </li>
-                    <li className={`${urlActual === '/wards/create' ? 'text-blue-300' : ''} ${user.role === ''? 'hidden': ''}`}>
+                    <li className={`${urlActual === '/wards/create' ? 'text-blue-300' : ''} ${user.role === 'admin' || user.role === 'guard'? 'hidden': ''}`}>
                         <Link to='/wards/create' className={`${urlActual === '/wards/create' ? 'text-blue-300 hover:bg-sky-800 font-semibold px-2 border border-gray-400 rounded' : 'text-white'} block mt-2 hover:text-blue-200`}>Crear un pabellón</Link>
                     </li>
                     <button type="button" onClick={onLogout} className="m-auto block mt-4 bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-600 hover:text-black rounded">Salir</button>

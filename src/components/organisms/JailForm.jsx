@@ -60,7 +60,7 @@ export const JailForm = ({ jail }) => {
     return (
         <div className='bg-white mt-10 px-5 py-10 rounded-lg shadow-lg md:w-3/4 mx-auto'>
             <h1 className='text-gray-800 font-bold uppercase text-center text-xl mb-4'>
-                {jail?.id ? 'Edit' : 'Create'} Carcel
+                {jail?.id ? 'Editar' : 'Crear'} Carcel
             </h1>
 
             {
