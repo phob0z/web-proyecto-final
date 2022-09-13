@@ -70,6 +70,7 @@ export const AppRouter = () => {
                                     <Route index path='/directors/show/:id' element={<ShowDirector />} />
                                     <Route index path='/directors/create' element={<CreateDirector />} />
                                     <Route index path='/directors/edit/:id' element={<UpdateDirector />} />
+                                    {/* Reportes */}
                                     <Route index path='/reports' element={<ListReports />} />
                                     <Route index path='/reports/show/:id' element={<ShowReport />} />
                                     <Route index path='/reports/create' element={<CreateReport />} />
