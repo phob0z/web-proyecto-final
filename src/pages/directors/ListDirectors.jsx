@@ -8,7 +8,6 @@ export const ListDirectors = () => {
   const [directors, setDirectors] = useState([]);
   const token = localStorage.getItem('token');
 
-
   const getDirectors = async () => {
     try {
       const response = await axios.get(
@@ -41,7 +40,6 @@ export const ListDirectors = () => {
       console.log(error);
     }
   }
-
 
   useEffect(() => {
     getDirectors();

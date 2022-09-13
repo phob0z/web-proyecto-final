@@ -11,7 +11,7 @@ export const ListJails = () => {
   const getJails = async () => {
     try {
       const response = await axios.get(
-        'hhttps://web-final-backend.herokuapp.com/api/v1/jail',
+        'https://web-final-backend.herokuapp.com/api/v1/jail',
         //'https://127.0.0.1:8000/api/v1/jail',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
