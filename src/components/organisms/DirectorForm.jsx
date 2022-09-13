@@ -67,19 +67,19 @@ export const DirectorForm = ({ director }) => {
             </h1>
 
             {
-                error && <p className='text-red-700 font-semibold text-xl'>All fields are required</p>
+                error && <p className='text-red-700 font-semibold text-xl'>Todos los campos son requeridos</p>
             }
 
             <form onSubmit={handleSubmit}>
                 <div>
                     <label
                         htmlFor='first_name'
-                        className='text-gray-700 uppercase font-bold'>First Name</label>
+                        className='text-gray-700 uppercase font-bold'>Nombre</label>
                     <input
                         id='first_name'
                         type="text"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='First Name'
+                        placeholder='Nombre'
                         name='first_name'
                         value={form.first_name}
                         onChange={handleChange}
@@ -90,12 +90,12 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='last_name'
-                        className='text-gray-700 uppercase font-bold'>Last Name</label>
+                        className='text-gray-700 uppercase font-bold'>Apellido</label>
                     <input
                         id='last_name'
                         type="text"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='Last Name'
+                        placeholder='Apellido'
                         name='last_name'
                         value={form.last_name}
                         onChange={handleChange}
@@ -106,12 +106,12 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='username'
-                        className='text-gray-700 uppercase font-bold'>Username</label>
+                        className='text-gray-700 uppercase font-bold'>Nombre de usuario</label>
                     <input
                         id='username'
                         type="username"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='Username'
+                        placeholder='Nombre de usuario'
                         name='username'
                         value={form.username}
                         onChange={handleChange}
@@ -122,13 +122,13 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='email'
-                        className='text-gray-700 uppercase font-bold'>Email</label>
+                        className='text-gray-700 uppercase font-bold'>Correo electrónico</label>
                     <input
                         id='email'
                         type="email"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
                         name='email'
-                        placeholder='Email'
+                        placeholder='Correo electrónico'
                         value={form.email}
                         onChange={handleChange}
                         required
@@ -137,13 +137,13 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='personal_phone'
-                        className='text-gray-700 uppercase font-bold'>Phone Number</label>
+                        className='text-gray-700 uppercase font-bold'>Número de teléfono</label>
                     <input
                         id='personal_phone'
                         type="tel"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
                         name='personal_phone'
-                        placeholder='Phone Number'
+                        placeholder='Número de teléfono'
                         value={form.personal_phone}
                         onChange={handleChange}
                         required
@@ -152,13 +152,13 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='home_phone'
-                        className='text-gray-700 uppercase font-bold'>Home Number</label>
+                        className='text-gray-700 uppercase font-bold'>Número de teléfono 2</label>
                     <input
                         id='home_phone'
                         type="tel"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
                         name='home_phone'
-                        placeholder='Home Number'
+                        placeholder='Número de teléfono 2'
                         value={form.home_phone}
                         onChange={handleChange}
                         required
@@ -168,10 +168,10 @@ export const DirectorForm = ({ director }) => {
                 <div>
                     <label
                         htmlFor='address'
-                        className='text-gray-700 uppercase font-bold'>Address</label>
+                        className='text-gray-700 uppercase font-bold'>Dirección</label>
                     <textarea
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='Address'
+                        placeholder='Dirección'
                         name='address'
                         value={form.address}
                         onChange={handleChange}
@@ -181,7 +181,7 @@ export const DirectorForm = ({ director }) => {
 
                 <input
                     type="submit" className='bg-sky-800 w-full p-3 text-white uppercase font-bold rounded-lg hover:bg-sky-900 cursor-pointer transition-all'
-                    value={director?.id ? 'Update' : 'Save'}
+                    value={director?.id ? 'Actualizar' : 'Guardar'}
                 />
 
             </form>

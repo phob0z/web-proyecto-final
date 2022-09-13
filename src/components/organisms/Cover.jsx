@@ -10,8 +10,8 @@ export const Cover = () => {
           <Link to="/">
             <ShieldIcon styles='w-28 h-28 mx-auto' />
           </Link>
-          <h2 className='text-3xl font-extrabold'>Prison System</h2>
-          <p className='text-base'>Web system for the management of a penitentiary center</p>
+          <h2 className='text-3xl font-extrabold'>Sistema de prisión</h2>
+          <p className='text-base'>Sistema web para el manejo de un centro penitenciario</p>
         </div>
 
       </div>

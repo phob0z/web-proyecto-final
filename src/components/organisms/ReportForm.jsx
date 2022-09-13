@@ -57,23 +57,23 @@ export const ReportForm = ({ report }) => {
     return (
         <div className='bg-white mt-10 px-5 py-10 rounded-lg shadow-lg md:w-3/4 mx-auto'>
             <h1 className='text-gray-800 font-bold uppercase text-center text-xl mb-4'>
-                {report?.id ? 'Edit' : 'Create'} Report
+                {report?.id ? 'Edit' : 'Create'} Reporte
             </h1>
 
             {
-                error && <p className='text-red-700 font-semibold text-xl'>All fields are required</p>
+                error && <p className='text-red-700 font-semibold text-xl'>Todos los campos son requeridos</p>
             }
 
             <form onSubmit={handleSubmit}>
                 <div>
                     <label
                         htmlFor='title'
-                        className='text-gray-700 uppercase font-bold'>Title</label>
+                        className='text-gray-700 uppercase font-bold'>Título</label>
                     <input
                         id='title'
                         type="text"
                         className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='Title'
+                        placeholder='Título'
                         name='title'
                         value={form.title}
                         onChange={handleChange}
@@ -84,12 +84,12 @@ export const ReportForm = ({ report }) => {
                 <div>
                     <label
                         htmlFor='description'
-                        className='text-gray-700 uppercase font-bold'>Description</label>
+                        className='text-gray-700 uppercase font-bold'>Descripción</label>
                     <textarea
                         id='description'
                         type="text"
                         className='border-2  h-48 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5'
-                        placeholder='Description'
+                        placeholder='Descripción'
                         name='description'
                         value={form.description}
                         onChange={handleChange}
@@ -102,7 +102,7 @@ export const ReportForm = ({ report }) => {
 
                 <input
                     type="submit" className='bg-sky-800 w-full p-3 text-white uppercase font-bold rounded-lg hover:bg-sky-900 cursor-pointer transition-all'
-                    value={report?.id ? 'Update' : 'Save'}
+                    value={report?.id ? 'Actualizar' : 'Guardar'}
                 />
 
             </form>
