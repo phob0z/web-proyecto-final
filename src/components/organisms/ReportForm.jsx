@@ -36,14 +36,14 @@ export const ReportForm = ({ report }) => {
             console.log(report)
             if (report?.id) {
                 await axios.post(
-                    `http://web-final-backend.herokuapp.com/api/v1/report/${report.id}/update`,
-                    //`http://127.0.0.1:8000/api/v1/report/${report.id}/update`,
+                    `https://web-final-backend.herokuapp.com/api/v1/report/${report.id}/update`,
+                    //`https://127.0.0.1:8000/api/v1/report/${report.id}/update`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             } else {
                 await axios.post(
-                    `http://web-final-backend.herokuapp.com/api/v1/report/create`,
-                    //`http://127.0.0.1:8000/api/v1/report/create`,
+                    `https://web-final-backend.herokuapp.com/api/v1/report/create`,
+                    //`https://127.0.0.1:8000/api/v1/report/create`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             }

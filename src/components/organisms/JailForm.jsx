@@ -39,14 +39,14 @@ export const JailForm = ({ jail }) => {
             console.log(jail)
             if (jail?.id) {
                 await axios.post(
-                    `http://web-final-backend.herokuapp.com/api/v1/jail/${jail.id}/update`,
-                    //`http://127.0.0.1:8000/api/v1/jail/${jail.id}/update`,
+                    `https://web-final-backend.herokuapp.com/api/v1/jail/${jail.id}/update`,
+                    //`https://127.0.0.1:8000/api/v1/jail/${jail.id}/update`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             } else {
                 await axios.post(
-                    `http://web-final-backend.herokuapp.com/api/v1/jail/create`,
-                    //`http://127.0.0.1:8000/api/v1/jail/create`,
+                    `https://web-final-backend.herokuapp.com/api/v1/jail/create`,
+                    //`https://127.0.0.1:8000/api/v1/jail/create`,
                     { ...form }, { headers: { 'accept': 'application/json', 'authorization': token } }
                 );
             }
