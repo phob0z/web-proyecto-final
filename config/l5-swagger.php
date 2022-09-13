@@ -2,6 +2,7 @@
 
 return [
     'default' => 'default',
+    'schemes' => ['https', 'http'],
     'documentations' => [
         'default' => [
             'api' => [
@@ -20,7 +21,7 @@ return [
                 /*
                  * Edit to include full URL in ui for assets
                 */
-                'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', true),
+                'use_absolute_path' => env('L5_SWAGGER_USE_ABSOLUTE_PATH', false),
 
                 /*
                  * File name of the generated json documentation file
@@ -175,10 +176,10 @@ return [
                 //Open API 3.0 support
                 'passport' => [ // Unique name of security
                     'type' => 'apiKey', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
-                    'description' => 'Introduzca el token de la forma (Bearer <token>)',
+                    'description' => 'Laravel passport oauth2 security.',
                     'in' => 'header',
                     "name" => "Authorization",
-                    'schemes' => 'https',
+                    'scheme' => 'https',
                     'flows' => [
                         "password" => [
                             "authorizationUrl" => config('app.url') . '/oauth/authorize',
