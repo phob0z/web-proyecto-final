@@ -2,36 +2,36 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-export const ListReports = () => {
+export const ListWards = () => {
 
   const navigate = useNavigate();
-  const [reports, setReports] = useState([]);
+  const [wards, setWards] = useState([]);
   const token = localStorage.getItem('token');
 
-  const getReports = async () => {
+  const getWards = async () => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/v1/report',
+        'http://127.0.0.1:8000/api/v1/ward',
         { headers: { 'accept': 'application/json', 'authorization': token } }
       );
-      console.log(response.data.data.reports)
-      setReports(response.data.data.reports)
+      console.log(response.data.data.wards)
+      setWards(response.data.data.wards)
     } catch (error) {
       console.log(error);
     }
   }
 
-  const deleteReport = async (id) => {
+  const deleteWard = async (id) => {
     try {
       console.warn(id);
       // eslint-disable-next-line no-restricted-globals
       const confirmation = confirm("Are you sure?")
       if (confirmation) {
         await axios.get(
-          `http://127.0.0.1:8000/api/v1/report/${id}/destroy`,
+          `http://127.0.0.1:8000/api/v1/ward/${id}/destroy`,
           { headers: { 'accept': 'application/json', 'authorization': token } }
         );
-        await getReports();
+        await getWards();
       }
     }
     catch (error) {
@@ -40,36 +40,38 @@ export const ListReports = () => {
   }
 
   useEffect(() => {
-    getReports();
+    getWards();
   }, [])
 
   return (
     <div>
-      <h1 className='font-black text-4xl text-sky-900'>Reports</h1>
+      <h1 className='font-black text-4xl text-sky-900'>Wards</h1>
       <hr className='mt-3' />
-      <p className='mt-3'>List of created reports</p>
+      <p className='mt-3'>List of created wards</p>
 
       <table className='w-full mt-5 table-auto shadow bg-white'>
         <thead className='bg-sky-900 text-white'>
           <tr>
             <th className='p-2'>#</th>
-            <th className='p-2'>Title</th>
-            <th className='p-2'>Description</th>
+            <th className='p-2'>Name</th>
+            <th className='p-2'>description</th>
             <td className='p-2'></td>
           </tr>
         </thead>
         <tbody>
           {
-            reports.map((report, index) => (
-              <tr key={report.id} className="border-b hover:bg-gray-100">
+            wards.map((ward, index) => (
+              <tr key={ward.id} className="border-b hover:bg-gray-100">
                 <td className='p-3'>{++index}</td>
-                <td className='p-3'>{report.title}</td>
-                <td className='p-3'>{report.description}</td>
+                <td className='p-3'>{ward.name}</td>
+                <td className='p-3'>{ward.description}</td>
                 <td className='p-3'>
                   <button type='button' className='bg-sky-800 block w-full text-white p-2 uppercase font-bold text-xs rounded-xl'
-                    onClick={() => navigate(`/reports/show/${report.id}`)}>Show</button>
+                    onClick={() => navigate(`/wards/show/${ward.id}`)}>Show</button>
                   <button type='button' className='bg-cyan-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'
-                    onClick={() => navigate(`/reports/edit/${report.id}`)}>Edit</button>
+                    onClick={() => navigate(`/wards/edit/${ward.id}`)}>Edit</button>
+                  <button type='button' className='bg-orange-900 block w-full text-white p-2 uppercase font-bold text-xs mt-2 mb-2 rounded-xl'
+                    onClick={() => deleteWard(ward.id)}>Delete</button>
                   
                 </td>
               </tr>

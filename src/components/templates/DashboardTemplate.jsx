@@ -45,12 +45,26 @@ export const DashboardTemplate = () =>
                     <li className="text-orange-900">
                         <Link to='/directors/create' className={`${urlActual === '/directors/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a director</Link>
                     </li>
+
+                    {/* Reports */}
                     <li className="text-orange-900">
                         <Link to='/reports' className={`${urlActual === '/reports' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Reports</Link>
                     </li>
-                    {/* Reportes */}
                     <li className="text-orange-900">
                         <Link to='/reports/create' className={`${urlActual === '/reports/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Report</Link>
+                    </li>
+                    {/* Jails */}
+                    <li className="text-orange-900">
+                        <Link to='/jails' className={`${urlActual === '/jails' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Jails</Link>
+                    </li>
+                    <li className="text-orange-900">
+                        <Link to='/jails/create' className={`${urlActual === '/jails/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Jail</Link>
+                    </li>
+                    <li className="text-orange-900">
+                        <Link to='/wards' className={`${urlActual === '/wards' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Wards</Link>
+                    </li>
+                    <li className="text-orange-900">
+                        <Link to='/wards/create' className={`${urlActual === '/wards/create' ? 'text-blue-300 underline' : 'text-white'} text-2xl block mt-2 hover:text-blue-200`}>Create a Ward</Link>
                     </li>
                     <button type="button" onClick={onLogout} className="m-auto text-white text-2xl block mt-4 hover:text-red-300 text-center bg-red-900 p-1 rounded-lg">Logout</button>
                 </ul>

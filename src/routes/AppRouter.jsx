@@ -17,6 +17,18 @@ import { ShowReport } from '../pages/reports/ShowReport';
 import { CreateReport } from '../pages/reports/CreateReport';
 import { UpdateReport } from '../pages/reports/UpdateReport';
 
+import { ListJails } from '../pages/jails/ListJails';
+import { ShowJail } from '../pages/jails/ShowJail';
+import { CreateJail } from '../pages/jails/CreateJail';
+import { UpdateJail } from '../pages/jails/UpdateJail';
+
+import { ListWards } from '../pages/wards/ListWards';
+import { ShowWard } from '../pages/wards/ShowWard';
+import { CreateWard } from '../pages/wards/CreateWard';
+import { UpdateWard } from '../pages/wards/UpdateWard';
+
+
+
 export const AppRouter = () => {
     return (
         <AuthProvider>
@@ -75,7 +87,16 @@ export const AppRouter = () => {
                                     <Route index path='/reports/show/:id' element={<ShowReport />} />
                                     <Route index path='/reports/create' element={<CreateReport />} />
                                     <Route index path='/reports/edit/:id' element={<UpdateReport />} />
-
+                                    {/* Jails */}
+                                    <Route index path='/jails' element={<ListJails />} />
+                                    <Route index path='/jails/show/:id' element={<ShowJail />} />
+                                    <Route index path='/jails/create' element={<CreateJail />} />
+                                    <Route index path='/jails/edit/:id' element={<UpdateJail />} />
+                                    {/* Wards */}
+                                    <Route index path='/wards' element={<ListWards />} />
+                                    <Route index path='/wards/show/:id' element={<ShowWard />} />
+                                    <Route index path='/wards/create' element={<CreateWard />} />
+                                    <Route index path='/wards/edit/:id' element={<UpdateWard />} />
                                 </Route>
                         </Routes>
                     </PrivateRoute>
