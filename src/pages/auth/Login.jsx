@@ -32,6 +32,11 @@ export const Login = () =>
         }
     }
 
+    const onForgotPass = (e) => {
+        e.preventDefault();
+        navigate("/forgot-password");
+    }
+
     return (
         <>
             <h2 className='text-2xl md:text-3xl font-bold'>Welcome Back</h2>
@@ -67,6 +72,11 @@ export const Login = () =>
                 </div>
                 <div className='pt-4 flex justify-center'>
                     <Button name='Sing in' styles='w-3/5' />
+                </div>
+            </form>
+            <form className='space-y-7 text-left' onSubmit={onForgotPass}>
+                <div className='pt-1 flex justify-center'>
+                    <Button name='Forgot your password?' styles='w-3/5'/>
                 </div>
             </form>
         </>
