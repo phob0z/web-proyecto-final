@@ -43,7 +43,7 @@ export const SetNewPassword = () =>
                     <input
                         className='rounded-2xl text-base px-4 py-2 border-0 border-b border-gray-300 focus:border-cyan-500 disabled:opacity-50 block mt-2 w-full'
                         id='token'
-                        name='access token'
+                        name='token'
                         type='string'
                         value={token}
                         placeholder='Introduzca el token de acceso'
