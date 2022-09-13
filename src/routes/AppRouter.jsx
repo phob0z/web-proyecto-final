@@ -21,19 +21,26 @@ export const AppRouter = () => {
                         <Routes>
                             <Route element={<AuthTemplate />}>
                                 <Route path='/*' element={<Login />} />
-                                <Route path='forgot-password/*' element={<Forgotpassword />} />
-                                <Route path='reset-password/*' element={<Resetpassword />} />
                             </Route>
                         </Routes>
                     </PublicRoute>
                 } />
 
-                <Route path='/*' element={
+                <Route path='forgot-password/*' element={
                     <PublicRoute>
                         <Routes>
                             <Route element={<AuthTemplate />}>
-                                <Route path='forgot-password/*' element={<Forgotpassword />} />
-                                <Route path='reset-password/*' element={<Resetpassword />} />
+                                <Route path='/*' element={<Forgotpassword />} />
+                            </Route>
+                        </Routes>
+                    </PublicRoute>
+                } />
+
+                <Route path='reset-password/*' element={
+                    <PublicRoute>
+                        <Routes>
+                            <Route element={<AuthTemplate />}>
+                                <Route path='/*' element={<Resetpassword />} />
                             </Route>
                         </Routes>
                     </PublicRoute>
